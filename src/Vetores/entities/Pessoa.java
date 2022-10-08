@@ -4,11 +4,22 @@ public class Pessoa {
     private String nome;
     private int idade;
     private double altura;
+    private char genero;
 
     public Pessoa(String nome, int idade, double altura) {
         this.nome = nome;
         this.idade = idade;
         this.altura = altura;
+    }
+
+    public Pessoa(double altura, char genero) {
+        this.altura = altura;
+        this.genero = genero;
+    }
+
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
     }
 
     public String getNome() {
@@ -23,12 +34,7 @@ public class Pessoa {
         return altura;
     }
 
-    @Override
-    public String toString() {
-        return "Pessoa{" +
-                "nome='" + nome + '\'' +
-                ", idade=" + idade +
-                ", altura=" + altura +
-                '}';
+    public char getGenero() {
+        return genero;
     }
 }
